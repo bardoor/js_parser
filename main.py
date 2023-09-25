@@ -4,8 +4,6 @@ FILTERN_TOKENS = ['parenthesized_expression', 'binary_expression', 'assignment_e
                   'expression_statement', 'program', 'variable_declarator', 'lexical_declaration',
                   'update_expression', 'object', 'for_statement', 'while_statement', 'empty_statement']
 
-ACCEPTABLE_TOKENS = ['while', 'for']
-
 CONTENT_TOKENS = ['identifier', 'number']
 
 
@@ -18,7 +16,7 @@ def flatten_tree(node):
     return tokens
 
 
-if __name__ == '__main__':
+def main():
     Language.build_library('build/languages.so', ['./tree-sitter-javascript'])
     JS_LANG = Language('build/languages.so', 'javascript')
 
@@ -37,3 +35,7 @@ if __name__ == '__main__':
             print(f"Type: {token.type}, Value: {token.text.decode('utf-8')}")
         else:
             print(f"Type: {token.type}")
+
+
+if __name__ == '__main__':
+    main()
