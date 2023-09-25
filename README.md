@@ -5,6 +5,6 @@
    ```
 3. Из директории с main.py:
    ```
-   git clone https://github.com/tree-sitter/tree-sitter-javascript'
+   git clone https://github.com/tree-sitter/tree-sitter-javascript
    ```
    
